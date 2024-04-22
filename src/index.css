@@ -11,3 +11,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.calculator {
+  display: grid; /* 网格布局 */
+  grid-template-columns: 100px 100px 100px 100px; /* 定义4列 */
+  grid-template-rows: 80px repeat(5, 50px);
+  gap: 1px; /* 网格的间隔 */
+  width: calc(400px + 3px);
+  margin: 0 auto; 
+  background-color: lightgray;
+}
+
+.output {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  grid-column: 1 / span 4; /* 从第一列开始独占4格 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 2px;
+  word-wrap: break-word;
+  border: 2px solid black;
+}
+
+.last-output {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.current-output {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ac {
+  grid-column: 1 / span 2;
+}
+
+.equal {
+  grid-column: 3 / span 2;
+}
+
+.calculator > button:hover {
+  background-color: pink;
+}
+
+.calculator > button {
+  background-color: white;
+}
+
+
+.calculator > button:active {
+  transform: scale(1.1);
+}
+
+
